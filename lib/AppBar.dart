@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'auth_screen.dart';
 import 'about.dart';
 import 'fire_notes.dart';
+import 'Note_structure.dart';
 
 class My_Drawer extends StatelessWidget {
   const My_Drawer({Key? key}) : super(key: key);
@@ -14,8 +15,8 @@ class My_Drawer extends StatelessWidget {
     showDialog(
       context: ctx,
       builder: (ctx) => AlertDialog(
-        title: Text('Are you sure?'),
-        content: Text(
+        title: const Text('Are you sure?'),
+        content: const Text(
           'Do you want to delete all Note entries ?',
         ),
         actions: <Widget>[
@@ -29,17 +30,35 @@ class My_Drawer extends StatelessWidget {
             child: Text('Yes'),
             onPressed: () async {
 
-              for(int i=0; i<temp.length; i++){
-                String id = temp[i].id;
-                await delete(id);
+              await get_all();
+
+              while(temp.length!=0){
+                await get_all();
+
+                for(int i=0; i<temp.length; i++){
+                  String id = temp[i].id;
+                  await delete(id);
+                  print(DateTime.now().toString());
+                  print(temp.length);
+                }
               }
 
               Navigator.pushAndRemoveUntil(ctx, MaterialPageRoute(builder: (context) {return FireNote();},),(route) => false);
+
+
+              // while(true){
+              //   if(temp.length!=0){continue;}
+              //   else{
+              //   }
+              // }
+
             },
           ),
         ],
       ),
     );
+
+
   }
 
   Future<void> fun(BuildContext ctx) async {
