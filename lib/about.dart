@@ -17,7 +17,7 @@ class About extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Text(' About - Developer '),
+          title: const Text(' About - Developer '),
         ),
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
@@ -25,13 +25,13 @@ class About extends StatelessWidget {
             // mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 80,
               ),
               Container(
                 width: 200,
                 height: 200,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
                       image: AssetImage('assets/images/444.png'),
@@ -41,15 +41,15 @@ class About extends StatelessWidget {
               ),
 
 
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text('Rishi Raj', style: TextStyle(
+              const Text('Rishi Raj', style: TextStyle(
                 fontSize: 30,
                 color: Colors.white
               ),),
 
-              SizedBox(
+              const SizedBox(
                 height: 100,
               ),
 
@@ -57,6 +57,9 @@ class About extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   InkWell(
+                    customBorder: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(35),
+                    ),
                   onTap: () async {
                     // final url = Uri.parse('https://www.instagram.com/_rishi_ryan_/');
                     // await launchUrl(url);
@@ -67,7 +70,7 @@ class About extends StatelessWidget {
                     child: Container(
                       width: 80,
                       height: 80,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             image: AssetImage('assets/images/insta.png'),
@@ -78,6 +81,9 @@ class About extends StatelessWidget {
                   ),
 
                   InkWell(
+                    customBorder: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(35),
+                    ),
                     onTap: () async {
                       // final url = Uri.parse('https://www.linkedin.com/in/rishi-raj-32648a196/');
                       // await launchUrl(url);
@@ -87,7 +93,7 @@ class About extends StatelessWidget {
                     child: Container(
                       width: 80,
                       height: 80,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             image: AssetImage('assets/images/link.jpg'),
