@@ -30,6 +30,7 @@ class FireNoteState extends State<FireNote> {
     });
   }
 
+
   @override
   void initState() {
     super.initState();
@@ -92,6 +93,9 @@ class FireNoteState extends State<FireNote> {
                     itemCount: Data.length,
                     itemBuilder: (context, index) {
                       return InkWell(
+                        customBorder: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
                         onLongPress: () {
                           alert(Data[index].id, context);
                         },
