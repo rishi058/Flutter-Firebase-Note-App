@@ -1,16 +1,32 @@
 # fire_notes
 
-A new Flutter project.
+ This is a Basic Note App prepared by using firebase as a backend service.
+ 
+## Tech-Stack
+  -Flutter
+  -Dart
+  -Firebase(Realtime Database Service).
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+• Built an Sign In Sign Up Page, So that only authenticated user can use
+  the Note.
+  
+• User can Add, Edit Delete Note.
 
-A few resources to get you started if this is your first Flutter project:
+• Created a Grid View with multiple colors for better user experience.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+• Data is stored in cloud, so it can be accessed from diffrent devices with
+  your login credentials.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ ## Screenshots
+ 
+ <div style="display:flex;flex-wrap:wrap;">
+<img src="https://user-images.githubusercontent.com/97884033/200116652-8eb96603-de16-47d5-a104-5072cedfa891.jpg" />
+<img src="https://user-images.githubusercontent.com/97884033/200116657-383bb640-676c-42ca-ba18-e36170ddda30.jpg" />
+
+</div>
+
+## Bugs - (Things to Fix/Add
+-After logout, make sure all the Data should be wiped.
+-Change UI colors.
